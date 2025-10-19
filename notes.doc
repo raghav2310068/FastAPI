@@ -1,0 +1,90 @@
+Fast API --> is a modern high performance web framework for building API's with python.
+it is build on the top of ( Starlette and Pydantic )
+    Starlette manages how your api recieves requests and sends back responses.
+    Pydantic ensures that the data comming from the api is in right format and in correct
+
+PHILOSOPY BEHIND FAST API -->>
+    1. Fast to run 
+    2. Fast to code
+
+-----------------------------------------------------------------------------------------
+
+software can be of two types:
+    1. static --> a one in which there is no or minimal user interaction basically used to display information  eg: calender
+    2. dyamanic --> one with high human interaction     eg: excel
+
+there can be only 4 types of interaction that can be done in dyamanic software ie. CRUD opearions :
+    1. create     (POST)
+    2. retrieve   (GET)
+    3. update     (PUT)
+    4. delete     (DELETE)
+
+website bhi ek trah ke software hote h jo ki installed kisi or divice pr hota h (server) and use kisi or device pr hota h (client) all this is done through https protocol
+
+hppt methods --> POST,GET,PUT,DELETE
+
+-----------------------------------------------------------------------------------------
+
+path params --> are a specific part of a url path that can be identify a specific resource. let say hume kisi specific chej ke saath kam krna h to humne wo url m dena padega use path params khte h 
+
+The Path() function in FastAPI is used to provide metadata, validation
+rules, and documentation hints for path parameters in your API
+endpoints.
+
+Title
+Description
+Example
+ge, gt, le, It
+Min_length
+Max_length
+regex
+
+https status code are 3 digit numbers that is returned by a web server to indicate the result of a client requests 
+
+They help the client (browser, frontend, mobile app, etc.) understand:
+⚫ whether the request was successful,
+⚫ whether something went wrong,
+⚫ and what kind of issue occurred (if any).
+
+3xx Redirection Further action needs to be taken (e.g., redirect)
+4xx XXX A Client Error Something is wrong with the request from the client
+5xx X Server Error Something went wrong on the server side
+
+200 OK                          Standard success A GET or POST succeeded
+201 Created                     Resource created After a POST that creates something
+204 No Content                  Success, but no data returned After a DELETE request
+400 Bad Request                 Malformed or invalid request Missing field, wrong data type
+401 Unauthorized                No/invalid authentication Login required
+403 Forbidden                   Authenticated, but no permission Logged in but not allowed
+404 Not Found                   Resource doesn't exist Patient ID not in DB
+500 Internal Server Error       Generic failure Something broke on the server
+502 Bad Gateway                 Gateway (like Nginx) failed to reach backend
+503 Service Unavailable         Server is down or overloaded
+
+http exception is a special built in exception in FastAPI used to return custom http response code when something goes wrong in the API 
+instead of returning a normal json or crashing the server you can gracefully raise an error with :
+⚫ a proper http status code 
+⚫ custom error message 
+⚫ extra headers 
+
+Query() is a utility function provided by FastAPI to declare, validate, and document query parameters inyour API endpoints.
+It allows you to:
+    • Set default values
+    • Enforce validation rules
+    • Add metadata like description, title, examples
+
+    • default                                           Set default value (e.g., Query(e))
+    • title                                             Displayed in API docs
+    • description                                       Detailed explanation in Swagger
+    • example/examples                                  Provide sample inputs
+    • min_length, max_length                            Validate string length
+    • ge, gt, le,lt                                     Validate numeric bounds
+    • regex                                             Pattern match for strings
+
+---------------------------------------------------------------------------------------------------
+
+Pydantic --> 
+    • type valudation ke kaam aata h  
+    • agar hume constraints lgane h to ki age negative n ho 
+    
+pydantic computed field : man lo koi aise value h jo user ni dera but wo user dwara di gyi value se nikalni h to hum computed fields ka use krte h
